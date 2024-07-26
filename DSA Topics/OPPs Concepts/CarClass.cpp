@@ -5,7 +5,7 @@ using namespace std;
 
 class Car {
 private:
-    int price; // Added this to fix the reference to price in Display()
+    int price; // Added this to fix the reference to price in DisplayCarDetails()
 
 public:
     string name;
