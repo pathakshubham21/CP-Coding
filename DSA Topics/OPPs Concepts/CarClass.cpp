@@ -5,12 +5,19 @@ using namespace std;
 
 class Car {
 private:
-    int model;
     int price; // Added this to fix the reference to price in Display()
 
 public:
     string name;
     int ManfacturedYear;
+
+    void addCar(string name,int price, int ManfacturedYear)
+    {
+        this->name = name;
+        this->price = price;
+        this->ManfacturedYear = ManfacturedYear;
+        cout<<"Car added in collection"<<endl;
+    }
 
     void Display() {
         cout << "Car Name: " << name << endl;
@@ -18,9 +25,18 @@ public:
         cout << "Car Manufactured Year: " << ManfacturedYear << endl;
     }
 
+// Default Constructor
+    Car()
+    {
+        name = "Undefiend";
+        price = 0;
+        ManfacturedYear =0000;
+        cout<<"Default Constructor Classed"<<endl;
+    }
+
     // Constructor to initialize the variables
-    Car(string carName, int carPrice, int carManufacturedYear) {
-        name = carName;
+    Car(string name, int carPrice, int carManufacturedYear) {
+        this->name = name;
         price = carPrice;
         ManfacturedYear = carManufacturedYear;
     }
