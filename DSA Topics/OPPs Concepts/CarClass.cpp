@@ -19,7 +19,7 @@ public:
         cout<<"Car added in collection"<<endl;
     }
 
-    void Display() {
+    void DisplayCarDetails() {
         cout << "Car Name: " << name << endl;
         cout << "Car Price: " << price << endl;
         cout << "Car Manufactured Year: " << ManfacturedYear << endl;
@@ -31,7 +31,7 @@ public:
         name = "Undefiend";
         price = 0;
         ManfacturedYear =0000;
-        cout<<"Default Constructor Classed"<<endl;
+        cout<<"Default Constructor called"<<endl;
     }
 
     // Constructor to initialize the variables

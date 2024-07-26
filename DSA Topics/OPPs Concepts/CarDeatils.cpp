@@ -6,17 +6,18 @@ using namespace std;
 
 int main() {
     // Creating an object of the Car class
-    Car myCar1("Toyota", 20000, 2021);
-    myCar1.Display();
+    Car myCar1;
+    myCar1.addCar("Toyota", 20000, 2021);
+    myCar1.DisplayCarDetails();
     
     Car myCar2;
-    myCar2.Display();
 
     myCar2.addCar("Audi",100,2024);
+    myCar2.DisplayCarDetails();
 
     cout<<"Printing all car Cleaction"<<endl;
-    myCar1.Display();
-    myCar2.Display();
+    myCar1.DisplayCarDetails();
+    myCar2.DisplayCarDetails();
 
 
 
