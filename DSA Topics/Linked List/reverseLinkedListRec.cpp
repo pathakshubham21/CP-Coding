@@ -36,7 +36,7 @@ Sample Output 2 :
 // 	return previous;
 // }
 
-
+Solution 2 
 Node *reverseLinkedListRec(Node *head)
 
 {
@@ -56,3 +56,18 @@ Node *reverseLinkedListRec(Node *head)
 	return smallreversedList;
 }
 
+Solution 3rd
+
+Node* reverseLinkedListRec(Node* head) {
+    // Base case: if head is empty or has reached the list end
+    if (head == NULL || head->next == NULL) {
+        return head;
+    }
+
+    // Recursive case: reverse the rest list and put the first element at the end
+    Node* newHead = reverseLinkedListRec(head->next);
+    head->next->next = head;
+    head->next = NULL;
+
+    return newHead;
+}
