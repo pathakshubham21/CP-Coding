@@ -8,4 +8,12 @@ The repository is organized into the following topics:
 3. Mix Problem
 4. Recursion
 5. Searching and Sorting Algos
-5. to be continued...
+6. Dinamic Memory
+7. Linked List
+8. OPPs Concept
+9. Queue
+10. Stack
+11. Vector & Pair
+12. String
+13. Pointers
+14. To be Continue..
