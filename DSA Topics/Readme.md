@@ -16,4 +16,5 @@ The repository is organized into the following topics:
 11. Vector & Pair
 12. String
 13. Pointers
-14. To be Continue..
+14. Tree
+15. To be Continue..
