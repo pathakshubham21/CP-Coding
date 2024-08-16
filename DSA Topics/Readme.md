@@ -17,4 +17,5 @@ The repository is organized into the following topics:
 12. String
 13. Pointers
 14. Tree
-15. To be Continue..
+15. HashMap
+16. To be continued..
