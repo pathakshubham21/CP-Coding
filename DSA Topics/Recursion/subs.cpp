@@ -28,7 +28,8 @@ int subs(string input,string output,int size,int index)
 }
 
 int main() {
-	string input= "ABC";
+	string input;
+    cin>>input;
     cout<<subs(input,"",input.length(),0);
     return 0;
 	
