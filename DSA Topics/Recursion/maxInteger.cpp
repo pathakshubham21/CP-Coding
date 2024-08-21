@@ -10,7 +10,7 @@ public:
         }
         char maxChar = *std::max_element(start + 1, num.end());
 
-        for(int i= start+1,i<num.lenght();i++)
+        for(int i= start+1;i<num.lenght();i++)
         {
             if(num[start]<num[i] && num[i]==maxChar)
             {
