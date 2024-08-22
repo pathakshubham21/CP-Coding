@@ -63,3 +63,39 @@ static int t[1001][1001];
         memset(t, -1, sizeof(t));  // Initialize memoization table with -1
         return solve(W, wt, val, wt.size());
     }
+
+    // DP solution 
+
+       int solve(int W, vector<int>& wt, vector<int>& val, int n) {
+    // Create a 2D DP table
+    int dp[n+1][W+1];
+
+    // Initialize the DP table
+    for (int i = 0; i <= n; i++) {
+        for (int j = 0; j <= W; j++) {
+            if (i == 0 || j == 0) {
+                dp[i][j] = 0;
+            }
+        }
+    }
+
+    // Fill the DP table
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= W; j++) {
+            if (wt[i-1] <= j) {
+                dp[i][j] = max(val[i-1] + dp[i-1][j-wt[i-1]], dp[i-1][j]);
+            } else {
+                dp[i][j] = dp[i-1][j];
+            }
+        }
+    }
+
+    // Return the result from the last cell of the DP table
+    return dp[n][W];
+}
+
+    // Function to return max value that can be put in knapsack of capacity W.
+    int knapSack(int W, vector<int>& wt, vector<int>& val) {
+
+        return solve(W, wt, val, wt.size());
+    }
