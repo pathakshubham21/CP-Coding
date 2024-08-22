@@ -16,8 +16,7 @@ using namespace std;
 // Input: W = 3, val[] = {1,2,3}, wt[] = {4,5,6}
 // Output: 0
 // Explanation: Every item has a weight exceeding the knapsack's capacity (3).
-class Solution {
-  public:
+
   int solve(int W, vector<int>& wt, vector<int>& val,int n)
   {
       if(W==0 || n==0)
@@ -39,48 +38,28 @@ class Solution {
         return solve(W,wt,val,wt.size());
         
     }
-};
 
-//{ Driver Code Starts.
+// Solution using memoization 
+static int t[1001][1001];
 
-int main() {
-    // taking total testcases
-    int t;
-    cin >> t;
-    cin.ignore();
-    while (t--) {
-        // reading number of elements and weight
-        int n, w;
-        vector<int> arr, val, wt, drr;
-        string ip;
-        int number;
-        getline(cin, ip);
-        stringstream ss(ip);
-
-        while (ss >> number) {
-            arr.push_back(number);
+    int solve(int W, vector<int>& wt, vector<int>& val, int n) {
+        if (W == 0 || n == 0) {
+            return 0;
         }
 
-        getline(cin, ip);
-        ss.clear();
-        ss.str(ip);
-
-        while (ss >> number) {
-            val.push_back(number);
+        if (t[n][W] != -1) {
+            return t[n][W];
         }
 
-        w = arr[0];
-        n = val.size();
-        getline(cin, ip);
-        ss.clear();
-        ss.str(ip);
-
-        while (ss >> number) {
-            wt.push_back(number);
+        if (wt[n - 1] <= W) {
+            return t[n][W] = max(val[n - 1] + solve(W - wt[n - 1], wt, val, n - 1), solve(W, wt, val, n - 1));
+        } else {
+            return t[n][W] = solve(W, wt, val, n - 1);
         }
-        Solution ob;
-        cout << ob.knapSack(w, wt, val) << endl;
     }
-    return 0;
-}
-// } Driver Code Ends
+
+    // Function to return max value that can be put in knapsack of capacity W.
+    int knapSack(int W, vector<int>& wt, vector<int>& val) {
+        memset(t, -1, sizeof(t));  // Initialize memoization table with -1
+        return solve(W, wt, val, wt.size());
+    }
