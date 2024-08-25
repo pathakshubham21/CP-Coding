@@ -11,7 +11,7 @@
 // 4 
 // 5 1 2 4
 // 3
-// Sample Output 1 :
+// Sample Output 1 : 
 // 2
 // Explanation
 // (5,2) and (1,4) are the possible combinations as their absolute difference is 3.
