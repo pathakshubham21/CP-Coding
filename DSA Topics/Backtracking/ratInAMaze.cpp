@@ -68,6 +68,7 @@ bool solveMazeUtil(int maze[20][20], int x, int y, int n, bool visited[20][20]) 
     // Backtrack: unmark x, y as part of the solution path
     visited[x][y] = false;
     return false;
+    
 }
 
 bool ratInAMaze(int maze[20][20], int n) {
