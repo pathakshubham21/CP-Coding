@@ -21,7 +21,7 @@
 // 1 0 1
 // 0 1 1
 // Sample Output 2 :
-//  false
+False 
 
 bool isSafe(int maze[20][20], int x, int y, int n, bool visited[20][20]) {
     // Check if (x, y) is within maze bounds, the cell is not blocked, and it hasn't been visited yet
@@ -68,7 +68,7 @@ bool solveMazeUtil(int maze[20][20], int x, int y, int n, bool visited[20][20]) 
     // Backtrack: unmark x, y as part of the solution path
     visited[x][y] = false;
     return false;
-    
+
 }
 
 bool ratInAMaze(int maze[20][20], int n) {
