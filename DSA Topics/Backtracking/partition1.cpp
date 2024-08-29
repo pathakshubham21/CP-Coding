@@ -56,6 +56,7 @@ public:
         }
 
     }
+    // partiction arrey in two equal part
     vector<vector<string>> partition(string s) {
         vector<vector<string>>result;
         if(s.length()==0)
@@ -64,6 +65,7 @@ public:
         vector<string>vec;
         solve(s,0,vec,result);
         return result;
+
         
     }
 };
