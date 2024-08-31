@@ -53,3 +53,38 @@ int countMinStepsToOne(int n)
 
 	return ans;
 }
+
+// DP solution 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int static arr[1000001]; // Updated the size to 10^6 + 1
+
+int countStepsToOne(int n) {
+    // Base case: if n is 1, no more steps are needed
+    if (n <= 1)
+        return 0;
+
+    // If we have already computed the answer for this 'n', return it
+    if (arr[n] != 0)
+        return arr[n];
+
+    // Recursive calls for the three possible operations
+    int x = countStepsToOne(n - 1);
+    int y = INT_MAX;
+    int z = INT_MAX;
+
+    if (n % 2 == 0) {
+        y = countStepsToOne(n / 2);
+    }
+
+    if (n % 3 == 0) {
+        z = countStepsToOne(n / 3);
+    }
+
+    // Find the minimum steps required and store it in the array
+    arr[n] = min(x, min(y, z)) + 1;
+
+    return arr[n];
+}
