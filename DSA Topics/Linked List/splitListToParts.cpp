@@ -20,6 +20,7 @@
 
 
 // Input: head = [1,2,3,4,5,6,7,8,9,10], k = 3
+// Input: head = [1,2,3,4,5,6,7,8,9,10], k = 3
 // Output: [[1,2,3,4],[5,6,7],[8,9,10]]
 // Explanation:
 // The input has been split into consecutive parts with size difference at most 1, and earlier parts are a larger size than the later parts.
