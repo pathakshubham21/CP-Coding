@@ -7,3 +7,10 @@ switch(x){
     default:
     System.out.println("default");
 }
+
+// New switch case 
+
+switch (month) { 
+    case JANUARY, JUNE, JULY -> 3; 
+    case FEBRUARY, SEPTEMBER -> 1;
+}
