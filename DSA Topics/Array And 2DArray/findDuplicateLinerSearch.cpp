@@ -31,7 +31,7 @@ class Solution {
 public:
 int findDuplicate(vector<int>& nums) {
     for (int i = 0; i < nums.size(); i++) {
-        int index = abs(nums[i]);  
+        int index = abs(nums[i]);  // Use the absolute value to get the index
         
         if (nums[index] < 0) { 
             return index;
