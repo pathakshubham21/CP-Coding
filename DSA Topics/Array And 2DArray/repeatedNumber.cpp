@@ -45,4 +45,5 @@ vector<int> Solution::repeatedNumber(const vector<int> &A) {
     }
     
     return {repeating,missing};
+    // return {repeating,missing};
 }
