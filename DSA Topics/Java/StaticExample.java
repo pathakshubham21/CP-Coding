@@ -10,7 +10,7 @@ class Mobile
     }
 
     public Mobile()
-    {s
+    {
         Name = "MyPhone";
         Brand  = "Nokia";
     }
@@ -27,6 +27,9 @@ class StaticExample
     {
         Mobile obj1 = new Mobile();
         obj1.Display();
+
+        int a[5];
+        int a[] = new int[5];
 
         obj1.Name = "Iphone";
         obj1.Brand = "Apple";
