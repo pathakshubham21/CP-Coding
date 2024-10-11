@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Student {
 
+	// This is Co
 	@Bean (name = "StudentName")
 	public String name()
 	{
