@@ -1,5 +1,7 @@
 package com.FirstSpringBootProject.lern_spring_fremwork.SpringBeanProject;
 
+import java.util.Arrays;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class AppSpringBean {
@@ -21,15 +23,23 @@ public class AppSpringBean {
 		//  Calling Bean by using Bean custom name --
 		System.out.println(Context.getBean("address2"));
 		
-		// Calling Bean by using Bean class name --
-		System.out.println(Context.getBean(Address.class));
-		
 		
 		//Calling person using method call 
 		System.out.println(Context.getBean("person2MethodCall"));
 		
 		//Calling person using parameter
 		System.out.println(Context.getBean("person3Parameter"));
+		
+		
+		// Printing all spring beans names
+		Arrays.stream(Context.getBeanDefinitionNames())
+		.forEach(System.out::println);
+		
+		// Calling Bean by using Bean class name and Primary Concept --
+		System.out.println(Context.getBean(Address.class));
+		
+		// Calling Bean by using Bean class name and Primary Concept --
+		System.out.println(Context.getBean(Person.class));
 		
 		
 		Context.close();

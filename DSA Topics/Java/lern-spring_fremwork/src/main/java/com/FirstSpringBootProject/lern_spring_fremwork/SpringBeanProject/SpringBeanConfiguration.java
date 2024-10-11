@@ -2,6 +2,7 @@ package com.FirstSpringBootProject.lern_spring_fremwork.SpringBeanProject;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 record Person(String name , int age, Address address) {};
 record Address(String FirstLine, String City) {};
@@ -32,13 +33,21 @@ public class SpringBeanConfiguration {
 //	}
 	
 	@Bean(name = "address2")
+	@Primary
 	public Address address()
+	{
+		return new Address("MG road", "Bangalore");
+	}
+	
+	@Bean(name = "address3")
+	public Address address3()
 	{
 		return new Address("MG road", "Bangalore");
 	}
 	
 	
 	@Bean
+	@Primary
 	public Person person2MethodCall()
 	{
 		return new Person(name(), age(), address());
