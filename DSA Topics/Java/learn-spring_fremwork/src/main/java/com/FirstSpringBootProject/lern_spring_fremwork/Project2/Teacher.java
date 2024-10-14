@@ -17,6 +17,6 @@ public class Teacher {
 	@Bean (name = "TeacherName")
 	public String name()
 	{
-		return "Pathak Shubham Teacher";
+		return "Pathak Shubham";
 	}
 }
