@@ -17,7 +17,7 @@
 // 13 17 5 4 6
 // Sample Output 2 :
 // 17 6
-
+// Spcare complexcity O(1);
 
 #include<climits>
 void Leaders(int arr[],int len)
